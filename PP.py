@@ -11,7 +11,7 @@ class Powerpoint:
         # Data is a list of lists.
 
         # Create presentation and slide.
-        prs = Presentation("Ref\Theme.pptx")
+        prs = Presentation("~/Ref/Theme.pptx")
         title_slide_layout = prs.slide_layouts[1]
 
         for x in range(len(data)):
@@ -24,7 +24,7 @@ class Powerpoint:
 
             # Create image
             img = Dra.Gantt(data[x])
-            img_path = "Final\\" + str(img.filename)
+            img_path = "~/Final/" + str(img.filename)
 
             # Add image to slide
             left = Inches(0)
@@ -33,5 +33,5 @@ class Powerpoint:
             pic = slide.shapes.add_picture(img_path, left, top, width=width)
 	
         # Save it all out
-        prs.save("Final\Campaign Charts_" + str(time.strftime("%b%d")) \
+        prs.save("~/Final/Campaign Charts_" + str(time.strftime("%b%d")) \
         + "_" + str(data[x][0][9]) + ".pptx")

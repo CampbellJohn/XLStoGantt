@@ -3,7 +3,7 @@ import Dra
 import PP
 
 """ Scrape the Calendar """
-cal = Deliv.CalendarPull("Ref\Calendar_Jan22.xlsx")
+cal = Deliv.CalendarPull("~/Ref/Calendar_Jan22.xlsx")
 
 """ Sort Into Quarters """
 quarters = Deliv.Quarters(cal)

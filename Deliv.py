@@ -330,7 +330,7 @@ class CalendarPull:
         completed = []
 
         # Load up the completed deliverables into "c".
-        file_location = "Ref\Completed_New.xls"
+        file_location = "~/Ref/Completed_New.xls"
         workbook = xlrd.open_workbook(file_location) # Open Workbook
         sheet = workbook.sheet_by_index(0) # First Sheet
         c = [[sheet.cell_value(r,c) for c in range(sheet.ncols)] for r in     \
@@ -401,7 +401,7 @@ class ProductManager:
         """ Quarter 1 """
         self.Q1 = self.mine(obj.Q1)
         self.Q1_xls = self.xlsprep(self.Q1)
-        self.Q1_filename = "Final\Deliverables_Q1_" \
+        self.Q1_filename = "~/Final/Deliverables_Q1_" \
             + str(time.strftime("%b%d")) + "_" + str(self.Q1[0][3]) + ".xls"
         self.Q1_gantt = []
         self.gantt(self.Q1, self.Q1_gantt)
@@ -409,13 +409,13 @@ class ProductManager:
         """ Quarter 2 """
         self.Q2 = self.mine(obj.Q2)
         self.Q2_xls = self.xlsprep(self.Q2)
-        self.Q2_filename = "Final\Deliverables_Q2_" \
+        self.Q2_filename = "~/Final/Deliverables_Q2_" \
             + str(time.strftime("%b%d")) + "_" + str(self.Q2[0][3]) + ".xls"
         self.Q2_gantt = []
         self.gantt(self.Q2, self.Q2_gantt)
         
         """ Generic Filename """
-        self.filename = "Final\Deliverables_" \
+        self.filename = "~/Final/Deliverables_" \
             + str(time.strftime("%b%d")) + "_" + str(self.Q1[0][3]) + ".xls"
 
     def xlsprep(self, data):

@@ -35,10 +35,10 @@ class Gantt:
             self.halfdays = (self.days/2) + 1
 
         """ Set up Fonts """
-        self.font = ImageFont.truetype("Ref\Regular.ttf", 14)
-        self.font1 = ImageFont.truetype("Ref\Regular.ttf", 12)
-        self.font2 = ImageFont.truetype("Ref\Regular.ttf", 10)
-        self.font3 = ImageFont.truetype("Ref\Regular.ttf", 8)
+        self.font = ImageFont.truetype("~/Ref/Regular.ttf", 14)
+        self.font1 = ImageFont.truetype("~/Ref/Regular.ttf", 12)
+        self.font2 = ImageFont.truetype("~/Ref/Regular.ttf", 10)
+        self.font3 = ImageFont.truetype("~/Ref/Regular.ttf", 8)
 
         """ Set up Columns """
         self.n = range(self.canv)
@@ -95,7 +95,7 @@ class Gantt:
                         + ".png"
         
         # Write to stdout
-        self.im.save("Final\\" + str(self.filename), "PNG")
+        self.im.save("~/Final/" + str(self.filename), "PNG")
 
     def draw_timeline(self):
         draw = ImageDraw.Draw(self.im)
@@ -243,10 +243,10 @@ class CampaignGantt(Gantt):
             self.halfdays = (self.days/2) + 1
 
         """ Set up Fonts """
-        self.font = ImageFont.truetype("Ref\Regular.ttf", 14)
-        self.font1 = ImageFont.truetype("Ref\Regular.ttf", 12)
-        self.font2 = ImageFont.truetype("Ref\Regular.ttf", 10)
-        self.font3 = ImageFont.truetype("Ref\Regular.ttf", 8)
+        self.font = ImageFont.truetype("~/Ref/Regular.ttf", 14)
+        self.font1 = ImageFont.truetype("~/Ref/Regular.ttf", 12)
+        self.font2 = ImageFont.truetype("~/Ref/Regular.ttf", 10)
+        self.font3 = ImageFont.truetype("~/Ref/Regular.ttf", 8)
 
         """ Set up Columns """
         self.n = range(self.canv)
@@ -303,5 +303,5 @@ class CampaignGantt(Gantt):
                         + ".png"
         
         # Write to stdout
-        self.im.save("Final\\" + str(self.filename), "PNG")
+        self.im.save("~/Final/" + str(self.filename), "PNG")
 
